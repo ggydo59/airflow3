@@ -511,7 +511,7 @@ class TestDagBag:
         found_2 = dagbag.process_file(os.fspath(path2))
         assert len(found_2) == 0
         assert dagbag.import_errors[os.fspath(path2)].startswith(
-            "AirflowDagDuplicatedIdException: Ignoring DAG"
+            "AirflowDagDuplicatedIdException: Ignoring Dag"
         )
         assert dagbag.dags == dags_in_bag  # Should not change.
 
